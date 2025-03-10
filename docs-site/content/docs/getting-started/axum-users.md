@@ -28,7 +28,7 @@ Picking `realworld-axum-sqlx` apart piece by piece **we will show that by moving
 
 When working with Axum, you have to have your own `main` function which sets up every component of your app, gets your routers, adds middleware, sets context, and finally, eventually, goes and sets up a `listen` on a socket.
 
-This is a lot of manual, error prone work. 
+This is a lot of manual, error prone work.
 
 In Loco you:
 
@@ -92,7 +92,7 @@ Loco: use your standard `config/[stage].yaml` configuration, and load specific v
 # Web server configuration
 server:
   # Port on which the server will listen. the server binding is 0.0.0.0:{PORT}
-  port: {{% get_env(name="NODE_PORT", default=5150) %}}
+  port:  {{/* get_env(name="NODE_PORT", default=5150) */}}
 ```
 
 This configuration is strongly typed, contains most-used values like database URL, logger levels and filtering and more. No need to guess or reinvent the wheel.
@@ -175,7 +175,7 @@ In Loco, we've already answered these hard questions and provide multi-tier logg
 * Low level DB logging and tracing
 * All of Loco's components such as tasks, background jobs, etc. all use the same facility
 
-And we picked `tracing` so that any and every Rust library can "stream" into your log uniformly. 
+And we picked `tracing` so that any and every Rust library can "stream" into your log uniformly.
 
 But we also made sure to create smart filters so you don't get bombarded with libraries you don't know, by default.
 
