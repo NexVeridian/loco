@@ -1,0 +1,16 @@
+[book]
+language = "en"
+multilingual = false
+src = "src"
+title = "Loco Docs"
+description = "Docs for loco"
+
+[output.html]
+# additional-css = ["custom-width.css"]
+git-repository-url = "https://github.com/loco-rs/loco"
+edit-url-template = "https://github.com/loco-rs/loco/edit/master/book/{path}"
+# site-url = "https://loco.rs"
+# cname = "loco.rs"
+
+additional-css = ["theme/pagetoc.css"]
+additional-js = ["theme/pagetoc.js"]
